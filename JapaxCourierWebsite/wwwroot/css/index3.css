@@ -1,0 +1,251 @@
+﻿
+.typewriter-text {
+    padding-right: 10px;
+    color: #3c389f;
+    border-right: solid #D10513 3px;
+    text-transform: uppercase;
+    animation: cursor 1s ease-in-out infinite;
+    font-weight: 700;
+    font-size: 38px;
+}
+
+@keyframes cursor {
+    from {
+        border-color: #D10513;
+    }
+    to {
+        border-color: transparent;
+    }
+}
+
+.banner-top-clock-icon {
+    color: #d10513;
+    font-size: 40px;
+}
+
+.banner-top-img-0-animation {
+    -webkit-animation: fromLeftAnimate 1s;
+    -webkit-animation-delay: 0.2s;
+    animation: fromLeftAnimate 1s;
+    animation-delay: 0.2s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+}
+
+.banner-top-img-1-animation {
+    -webkit-animation: fromLeftAnimate 4s;
+    -webkit-animation-delay: 0.2s;
+    animation: fromLeftAnimate 4s;
+    animation-delay: 0.2s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+}
+
+.banner-top-img-2-animation {
+    -webkit-animation: fromLeftAnimate 8s;
+    -webkit-animation-delay: 0.2s;
+    animation: fromLeftAnimate 8s;
+    animation-delay: 0.2s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+}
+
+@-moz-keyframes fromLeftAnimate {
+    0% {
+        transform: translateX(-200px);
+    }
+
+    100% {
+        transform: translateX(100px);
+    }
+}
+
+@-webkit-keyframes fromLeftAnimate {
+    0% {
+        transform: translateX(-200px);
+    }
+
+    100% {
+        transform: translateX(100px);
+    }
+}
+
+@keyframes fromLeftAnimate {
+    0% {
+        transform: translateX(-200px);
+    }
+    100% {
+        transform: translateX(100px);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+:root {
+    --baseImgWidth: 12vw;
+    --circleAnimationStroke: 4px;
+}
+
+.banner-padding {
+    height: auto !important;
+}
+
+.hero-section {
+    height: calc(100vh - 105px);
+}
+
+.process-slider2 {
+    max-width: initial;
+    width: var(--baseImgWidth);
+    height: calc(var(--baseImgWidth) * 2.1958);
+}
+
+.slider-img {
+    width: var(--baseImgWidth);
+    height: calc(var(--baseImgWidth) * 1.7375);
+}
+
+.circle-move-animation {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    border: var(--circleAnimationStroke) solid #000;
+    border-radius: 50%;
+    z-index: -2;
+}
+
+    .circle-move-animation:before {
+        content: '';
+        display: block;
+        position: absolute;
+        width: calc(100% + 10px);
+        height: 50%;
+        bottom: calc(var(--circleAnimationStroke) * -1);
+        left: calc(var(--circleAnimationStroke) * -1);
+        background: #fbfbfb;
+        /* z-index: -3; */
+    }
+
+.around-mobile-circled-icons span {
+    position: absolute;
+    display: block;
+    height: 40px; /* must be same as width */
+    width: 40px;
+    top: calc(50% - 20px); /* must be same as left and negative half width  */
+    left: calc(50% - 20px);
+    transition: all 0.2s linear;
+}
+
+.around-mobile-circled-icons img {
+    filter: grayscale(100%);
+    max-width: 100%;
+}
+
+.around-mobile-circled-icons {
+    left: 50% !important;
+    top: 7vw !important;
+    transform: translate(-50%, -50%);
+}
+
+.active-banner-icon-slide {
+    width: 60px !important;
+    height: 60px !important;
+    top: calc(50% - 30px) !important;
+    left: calc(50% - 30px) !important;
+}
+
+    .active-banner-icon-slide img {
+        filter: grayscale(0) !important;
+    }
+
+.active-banner-icon-current-slide img {
+    animation: ballonimation 4s linear infinite;
+
+}
+
+
+@keyframes ballonimation {
+    /*0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);*/
+    /* top: 50%; */
+    /*}
+
+    40% {
+        transform: translateY(-10px);*/
+    /* top: calc(50% -30px - 30px) */
+    /*}
+
+    60% {
+        transform: translateY(-6px);*/
+    /* top: calc(50% -30px - 15px) */
+    /*}*/
+    0% {
+        transform: rotate(0deg) translate(-5px) rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg) translate(-5px) rotate(-360deg);
+    }
+}
+
+.link-social-icon {
+    margin: 0;
+}
+
+
+#circle-svg-animation {
+    display: none;
+}
+
+
+
+
+
+
+
+
+
+/* Floating icon testing */
+
+.floating-text-icon {
+    color: #000;
+    font-size: 20px;
+    font-weight: 400;
+    position: absolute;
+    display: none !important;
+}
+
+.floating-text-icon:after {
+    content: '';
+    width: 9vw;
+    height: 1px;
+    background: #000;
+    position: absolute;
+    transform-origin: 0 0;
+}
+
+#icon-0 .floating-text-icon {
+    left: -11.5vw;
+    top: 6vw;
+}
+
+#icon-0 .floating-text-icon:after {
+    transform: rotate(-31deg);
+}
+
+.carousel, .carousel-inner, .carousel-item, .carousel-item img {
+    height: 100%;
+}

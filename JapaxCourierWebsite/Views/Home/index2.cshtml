@@ -1,0 +1,444 @@
+﻿@{
+    ViewBag.title = "Japax Courrier";
+}
+<style>
+    .play-icon {
+        display: none;
+    }
+
+    .slick-prev:before, .slick-next:before {
+        display: none;
+    }
+
+    .slider-img {
+        border-radius: 10%;
+    }
+
+    .card-heading-2 {
+        font-size: 15px;
+        color: #000;
+        font-weight: 400;
+    }
+    .card-margin-2{
+        margin-top: 95px;
+    }
+</style>
+<!--home banner start-->
+<section id="headSec" class="hero-section" style="background-image: none;
+        background-color: #fdfbfb;
+        z-index: 9999999999;
+        padding-left: 25px;">
+    <div>
+        <div class="row banner-padding">
+            <div class="col-md-7">
+                <div class="row">
+                    <div class="col-md-9">
+                        <div class="banner-text-slider">
+                            <div>
+                                <div class="card-margin" style="text-align: left; margin-bottom: 60px;">
+                                    <h3>
+                                        <img style="position: absolute;" src="~/images/home/fastest-deliver-64.png" />
+                                        <span style="color: #000; font-weight: 400; margin-left: 90px;">Super Fast Delivery</span><br />
+                                        <span style="margin-left: 90px;font-size: 16px;color: #000000ad;font-weight: 300;">Delivery within 6 Hours</span>
+                                    </h3>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="card-margin" style="text-align: left; margin-bottom: 60px;">
+                                    <h3>
+                                        <img style="position: absolute;" src="~/images/home/same-day-64.png" />
+                                        <span style="color: #000; font-weight: 400; margin-left: 90px;">Same Day Delivery</span><br />
+                                        <span style="margin-left: 90px;font-size: 16px;color: #000000ad;font-weight: 300;">Delivery within same day</span>
+                                    </h3>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="card-margin" style="text-align: left; margin-bottom: 60px;">
+                                    <h3>
+                                        <img style="position: absolute;" src="~/images/home/shortest-delivery-64.png" />
+                                        <span style="color: #000; font-weight: 400; margin-left: 90px;">Next Day Delivery</span><br />
+                                        <span style="margin-left: 90px;font-size: 16px;color: #000000ad;font-weight: 300;">Delivery within shortest time</span>
+                                    </h3>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="banner-content">
+                            <h4 class="headline-text" style="color: #d10513;">Track Your Parcel</h4>
+                            <div class="banner-btn" style="width: 90%;margin-top:25px;">
+                                <input id="tracking-idd" class="form-control" type="text" placeholder="Enter Your Tracking Number">
+                                <button class="common-btn" type="submit"><span>TRACK PARCEL</span></button>
+                            </div>
+                            <div class="card-margin-2" style="display:flex;">
+                                @*<a href="#">
+                    <img src="~/images/home/google-play.svg" class="link-social-icon" style="margin-bottom: 20px;" alt="Google Play" />
+                </a>
+                <a href="#">
+                    <img src="~/images/home/apple.svg" class="link-social-icon" alt="Apple Store" />
+                </a>*@
+                                <a href="#">
+                                    <img src="~/images/main/google-play.png" class="link-social-icon" alt="Google Play" />
+                                </a>
+                                <a href="#">
+                                    <img src="~/images/main/apple-store-removebg.png" class="link-social-icon" alt="Apple Store" />
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        @*<img style=" margin-left: -114px; width: auto; height: 110%;" src="~/images/home/abstract-character-concept-vector-31632199-removebg-preview (1).png" />*@
+                        <img style=" height: 91%; width: auto; margin-left:-7px;" src="~/images/home/banner-img-1.png" />
+                    </div>
+                </div>          
+            </div>
+            <div class="col-md-2" style="margin-top: 3%; margin-left: 90px">
+                <div class="process-slider margin-left">
+                    <div class="banner-slider">
+                        <div><img class="slider-img" src="~/images/home/sp.jpg" /></div>
+                        <div><img class="slider-img" style="margin-left:5px;" src="~/images/home/login-screen.jpg" /></div>
+                        <div><img class="slider-img" src="~/images/home/otp.jpg"/></div>
+                        <div><img class="slider-img"style="margin-left:5px;" src="~/images/home/reg.jpg" /></div>
+                         <div><img class="slider-img"style="margin-top:15px;margin-left:5px;" src="~/images/home/settings.jpg" /></div>
+                    </div>
+                    <img class="mobile-frame-img" src="~/images/home/mobile-phone-frame.png" />
+                </div>
+                @*<img class=" banner-img" src="~/images/home/scooter-boy.png" alt="banner">*@
+            </div>
+            <div class="col-md-1">
+                <div id="centerDiv" style="border-bottom: 1px solid rgba(0,0,0,0.35);position: absolute;left: 30px;z-index:1000; width: 100%">
+                </div>
+            </div>
+            <div class="col-md-1" style="padding: 0; margin-left: 20px;">
+                <div class="slider-cards" style="padding: 0;">
+                    <div class="slider-card banner-slider-right">
+                        <div>
+                            <div id="slider-text-1" class="card-heading" style="text-align: center; margin-bottom: 60px; margin-top: 60px; display: none">
+                                <h4 class="card-heading card-heading-2" style="text-align: right;">Splash Screen</h4>
+                            </div>
+                        </div>
+                        <div>
+                            <div id="slider-text-2" class="card-heading" style="text-align: center; margin-bottom: 60px; margin-top: 60px; display: none">
+                                <h4 class="card-heading card-heading-2" style="text-align: right;">Login Screen </h4>
+                            </div>
+                        </div>
+                        <div>
+                            <div id="slider-text-3" class="card-heading" style="text-align: center; margin-bottom: 60px; margin-top: 60px; display: none">
+                                <h4 class="card-heading card-heading-2" style="text-align: right;">OTP Screen </h4>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div id="slider-text-4" class="card-heading" style="text-align: center; margin-bottom: 60px; margin-top: 60px; display: none">
+                                <h4 class="card-heading card-heading-2" style="text-align: right;">Profile Registration</h4>
+                            </div>
+                        </div>
+                        <div>
+                            <div id="slider-text-5" class="card-heading" style="text-align: center; margin-bottom: 60px; margin-top: 60px; display: none">
+                                <h4 class="card-heading card-heading-2" style="text-align: right;">Settings Screen</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+<!--why japax start-->
+<section id="whyChooseSec" class="section-padding">
+    <div class="container">
+        <h2 class="section-headline">WHY JAPAX?</h2>
+        <div class="row">
+            <div class="col-md-8">
+                <div class="row">
+                    <div class="col-md-6">
+                        <span class="faa"><i class="fa fa-home"></i></span>
+                        <h4>Fastest Delivery</h4>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, ipsa! Reprehenderit
+                            adipisci saepe, exercitationem illo neque molestiae labore nostrum
+                        </p>
+                    </div>
+                    <div class="col-md-6">
+                        <span class="faa"><i class="fa fa-home"></i></span>
+                        <h4>Reliable</h4>
+                        <p>
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius hic blanditiis ex fugit
+                            quam maiores adipisci minima, provident tempo
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <span class="faa"><i class="fa fa-home"></i></span>
+                        <h4>Cost Effective</h4>
+                        <p>
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugit, repudiandae! Et, fuga
+                            dolor exercitationem in debitis nisi ut
+                        </p>
+                    </div>
+                    <div class="col-md-6">
+                        <span class="faa"><i class="fa fa-home"></i></span>
+                        <h4>Trustworthy</h4>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto distinctio facere ad
+                            culpa sapiente illo delectus, nihil
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 why-choose-img">
+            </div>
+        </div>
+    </div>
+</section>
+<!--why japax end-->
+<!--process slider start-->
+<section class="slider-sec section-padding">
+    <div class="row margin-left-0">
+        <div class="col-md-4">
+            <div class="slider-cards">
+                <div class="slider-card slider-left">
+                    <div>
+                        <div class="card-margin">
+                            <h2 class="card-heading">Live With Comfort - Download Our App</h2>
+                            <h4>Download the app now & make a daily part of your life</h4>
+                        </div>
+                        <div class="priv card-margin">
+                            <a href="#">
+                                <img src="~/images/home/google-play.svg" class="link-social-icon" alt="Google Play" />
+                            </a>
+                            <a href="#">
+                                <img src="~/images/home/apple.svg" class="link-social-icon" alt="Apple Store" />
+                            </a>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="card-heading card-margin">
+                            <h2>Live With Comfort </h2>
+                        </div>
+                        <div class="priv card-margin">
+                            <a href="#">
+                                <img src="~/images/main/google-play.png" class="link-social-icon" alt="Google Play" />
+                            </a>
+                            <a href="#">
+                                <img src="~/images/main/apple-store-removebg.png" class="link-social-icon" alt="Apple Store" />
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="process-slider">
+                <div class="image-slider">
+                    <div><img src="~/images/home/88b00fd728e75bf88d930374b31412c5-removebg-preview.png" /></div>
+                    <div><img src="~/images/home/stock-vector-create-business-account-smartphone-interface-vector-template-mobile-register-page-black-design-1351334480-removebg-preview.png" /></div>
+                </div>
+                <img class="mobile-frame-img" src="~/images/home/mobile_frame.png" />
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="slider-cards">
+                <div class="slider-card">
+                    <div class="card-margin">
+                        <h2 class="card-heading">Live With Comfort - Download Our App</h2>
+                        <h4>Download the app now & make a daily part of your life</h4>
+                    </div>
+                    <div class="priv card-margin">
+                        <a href="#">
+                            <img src="~/images/home/google-play.svg" class="link-social-icon" alt="Google Play" />
+                        </a>
+                        <a href="#">
+                            <img src="~/images/home/apple.svg" class="link-social-icon" alt="Apple Store" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--process slider end-->
+<!--counter start-->
+<div id="projectFacts" class="counter-section section-padding">
+    <div class="fullWidth eight columns">
+        <div class="projectFactsWrap ">
+            <div class="item wow fadeInUpBig animated animated" data-number="12" style="visibility: visible;">
+                <i class="fa fa-briefcase"></i>
+                <p id="number1" class="number">0</p>
+                <span></span>
+                <p>Parcels Delivered</p>
+            </div>
+            <div class="item wow fadeInUpBig animated animated" data-number="55" style="visibility: visible;">
+                <i class="fas fa-atlas"></i>
+                <p id="number2" class="number">0</p>
+                <span></span>
+                <p>Districts Coverage</p>
+            </div>
+            <div class="item wow fadeInUpBig animated animated" data-number="359" style="visibility: visible;">
+                <i class="fas fa-users"></i>
+                <p id="number3" class="number">0</p>
+                <span></span>
+                <p>Delivery Agents</p>
+            </div>
+            <div class="item wow fadeInUpBig animated animated" data-number="246" style="visibility: visible;">
+                <i class="fas fa-street-view"></i>
+                <p id="number4" class="number">0</p>
+                <span></span>
+                <p>Registered Merchants</p>
+            </div>
+        </div>
+    </div>
+</div>
+<!--counter end-->
+<!--feedback start-->
+<section class="section-padding">
+    <div id="testim" class="testim">
+        <div class="wrap">
+            <span id="right-arrow" class="arrow right fa fa-chevron-right"></span>
+            <span id="left-arrow" class="arrow left fa fa-chevron-left "></span>
+            <ul id="testim-dots" class="dots">
+                <li class="dot active"></li>
+                <li class="dot"></li>
+                <li class="dot"></li>
+                <li class="dot"></li>
+                <li class="dot"></li>
+            </ul>
+            <div id="testim-content" class="cont">
+                <div class="active">
+                    <div class="img">
+                        <img src="https://image.ibb.co/hgy1M7/5a6f718346a28820008b4611_750_562.jpg" alt="">
+                    </div>
+                    <h2>Lorem P. Ipsum</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.
+                    </p>
+                </div>
+                <div>
+                    <div class="img"><img src="https://image.ibb.co/cNP817/pexels_photo_220453.jpg" alt=""></div>
+                    <h2>Mr. Lorem Ipsum</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.
+                    </p>
+                </div>
+                <div>
+                    <div class="img"><img src="https://image.ibb.co/iN3qES/pexels_photo_324658.jpg" alt=""></div>
+                    <h2>Lorem Ipsum</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.
+                    </p>
+                </div>
+                <div>
+                    <div class="img"><img src="https://image.ibb.co/kL6AES/Top_SA_Nicky_Oppenheimer.jpg" alt=""></div>
+                    <h2>Lorem De Ipsum</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.
+                    </p>
+                </div>
+                <div>
+                    <div class="img"><img src="https://image.ibb.co/gUPag7/image.jpg" alt=""></div>
+                    <h2>Ms. Lorem R. Ipsum</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--feeback end-->
+<!--valuable client start-->
+<section class="container section-padding">
+    <h2 class="section-headline">OUR VALUEABLE CLIENTS</h2>
+    <div id="canvas"></div>
+    @*<div class="client-sliders">
+            <div class="client-slider">
+                <div class="client-img-div"><img src="~/images/home/grameenphone.png" /></div>
+                <div class="client-img-div"><img src="~/images/home/teletalk.png" /></div>
+                <div class="client-img-div"><img src="~/images/home/kfc.png" /></div>
+                <div class="client-img-div"><img src="~/images/home/swpno.png" /></div>
+                <div class="client-img-div"><img src="~/images/home/banglalink.png" /></div>
+                <div class="client-img-div"><img src="~/images/home/robi.png" /></div>
+            </div>
+        </div>*@
+</section>
+<!--valuable client end-->
+<script>
+    $(function () {
+        $(window).scroll(function () {
+            if ($(this).scrollTop() > 300) {
+                $(".play-icon").css("display", "flex")
+            }
+            else {
+                $(".play-icon").css("display", "none")
+            }
+        });
+    });
+
+    var canvas = {
+        element: document.getElementById('canvas'),
+        width: 1140,
+        height: 400,
+        initialize: function () {
+            this.element.style.width = this.width + 'px';
+            this.element.style.height = this.height + 'px';
+            // document.body.appendChild(this.element);
+        }
+    };
+
+    var Ball = {
+        create: function (img, dx, dy) {
+            var newBall = Object.create(this);
+            newBall.dx = dx;
+            newBall.dy = dy;
+            newBall.width = 100;
+            newBall.height = 100;
+            newBall.element = document.createElement('div');
+            newBall.element.style.backgroundImage = img;
+            newBall.element.style.width = newBall.width + 'px';
+            newBall.element.style.height = newBall.height + 'px';
+            newBall.element.className += ' ball';
+            newBall.width = parseInt(newBall.element.style.width);
+            newBall.height = parseInt(newBall.element.style.height);
+            canvas.element.appendChild(newBall.element);
+            return newBall;
+        },
+        moveTo: function (x, y) {
+            this.element.style.left = x + 'px';
+            this.element.style.top = y + 'px';
+        },
+        changeDirectionIfNecessary: function (x, y) {
+            if (x < 0 || x > canvas.width - this.width) {
+                this.dx = -this.dx;
+            }
+            if (y < 0 || y > canvas.height - this.height) {
+                this.dy = -this.dy;
+            }
+        },
+        draw: function (x, y) {
+            this.moveTo(x, y);
+            var ball = this;
+            setTimeout(function () {
+                ball.changeDirectionIfNecessary(x, y);
+                ball.draw(x + ball.dx, y + ball.dy);
+            }, 1000 / 40);
+        }
+    };
+
+    canvas.initialize();
+    var ball1 = Ball.create("url('../images/home/banglalink.png')", 4, 3);
+    var ball2 = Ball.create("url('../images/home/robi.png')", 1, 5);
+    var ball3 = Ball.create("url('../images/home/grameenphone.png')", 2, 6);
+    var ball4 = Ball.create("url('../images/home/kfc.png')", 3, 6);
+    ball1.draw(70, 0);
+    ball2.draw(20, 200);
+    ball3.draw(50, 30);
+    ball4.draw(50, 20);
+
+</script>

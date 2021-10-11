@@ -1,0 +1,134 @@
+﻿@{
+    ViewBag.Title = "Japax Courier - Contact Us";
+}
+<link href="~/css/contact.css" rel="stylesheet" />
+<link href="~/css/service-common.css" rel="stylesheet" />
+
+<section class="banner">
+    <div class="container">
+        <div class="row banner-row">
+            <div class="col-md-6">
+                <div class="promo-title">
+                    <h2>Contact Us</h2>
+                </div>
+            </div>
+            <div class="col-md-6 text-center">
+                <div class="image-dance normal-zoom">
+                    <img id="module" src="~/images/contact/2710477-removebg-preview.png" class="banner-img contact-img">
+                </div>
+             </div>
+        </div>
+    </div>
+</section>
+
+<section class="banner-after-sec">
+    <div class="container">
+        <div class="row contact-row justify-content-between align-items-center">
+            <div class="col-lg-6 text-center">
+                <div class="nk-block-contact nk-block-contact-s1">
+                    <ul class="contact-list">
+                        <li>
+                            <i class="fas fa-home contact-page-icon"></i>
+                            <div class="contact-text">
+                                Muntasir Center(6th Floor), <br /> Wasa Circle, Chittagong-4000, <br /> Bangladesh
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fa fa-phone contact-page-icon contact-page-icon-phone"></i>
+                            <div class="contact-text">
+                                <a href="tel:+8809678128128"> (+88) 096-78-128-128</a>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="far fa-envelope contact-page-icon"></i>
+                            <div class="contact-text">
+                                <a href="mailto:info@atc.co.bd">info@atc.co.bd</a>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-globe contact-page-icon"></i>
+                            <div class="contact-text">
+                                <a href="#">www.japax.co.bd</a>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="nk-circle-animation nk-df-center white small">
+                    </div>
+    <!-- .circle-animation -->
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="nk-block-text">
+                    <div class="nk-block-text-head">
+                        <h2 class="ttu">Let's Talk</h2>
+                        <p class="contact-details">We are always open and we welcome and questions you have for our team. If you wish to get in touch, please fill out the form below. Someone from our team will get back to you shortly.</p>
+                    </div>
+                    <div class="row contact-row">
+                        <div class="col-sm-6">
+                            <label class="field-label ttu">Your Name</label>
+                            <div class="field-wrap">
+                                <input name="contact-name" placeholder="Introduce yourself" type="text" class="input-bordered required" aria-required="true">
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <label class="field-label ttu">Contact No</label>
+                            <div class="field-wrap">
+                                <input name="contact-name" placeholder="How can we reach you" type="text" class="input-bordered required" aria-required="true">
+                            </div>
+                        </div>
+                        <div class="col-sm-12">
+                            <label class="field-label ttu">Your Email</label>
+                            <div class="field-wrap">
+                                <input name="contact-email" placeholder="Who do we replay to" type="email" class="input-bordered required email" aria-required="true">
+                            </div>
+                        </div>
+                        <div class="col-sm-12">
+                            <label class="field-label ttu">Your Message</label>
+                            <div class="field-wrap">
+                                <textarea name="contact-message" placeholder="Leave your question or comment here" class="input-bordered input-textarea required" aria-required="true"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row contact-row">
+                        <div class="col-sm-12 text-right">
+                            <button type="submit" class="btn btn-round">SEND</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<script>
+    $('.image-dance').on('mousemove', function (event) {
+        // This gives you the position of the image on the page
+        var bbox = event.target.getBoundingClientRect();
+
+        // Then we measure how far into the image the mouse is in both x and y directions
+        var mouseX = event.clientX - bbox.left;
+        var mouseY = event.clientY - bbox.top;
+
+        // Then work out how far through the image as a percentage the mouse is
+        var xPercent = (mouseX / bbox.width) * 100;
+        var yPercent = (mouseY / bbox.height) * 100;
+
+        // Then we change the `transform-origin` css property on the image to center the zoom effect on the mouse position
+        //event.target.style.transformOrigin = xPercent + '% ' + yPercent + '%';
+        // It's a bit clearer in jQuery:
+        $(this).css('transform-origin', (xPercent + '% ' + yPercent + '%'));
+        // We add the '%' units to make sure the string looks exactly like the css declaration it becomes.
+
+    });
+
+    // If you want it to automatically trigger on hover
+    $('.image-dance').on('mouseenter', function () {
+        $(this).addClass('zoom-in');
+        $(this).removeClass('normal-zoom');
+    });
+
+    // and stop when not hovering
+    $('.image-dance').on('mouseleave', function () {
+        $(this).addClass('normal-zoom');
+        $(this).removeClass('zoom-in');
+    });
+</script>

@@ -1,0 +1,134 @@
+﻿@{
+    ViewBag.title = "Japax Courrier - On Demand Service";
+}
+<link href="~/css/service-common.css" rel="stylesheet" />
+<style>
+    .ondemand-img {
+        padding-top: 6%;
+    }
+    
+</style>
+<section class="banner">
+    <div class="container">
+        <div class="row banner-row">
+            <div class="col-md-6">
+                <div class="promo-title">
+                    <h2>On-Demand Service</h2>
+                </div>
+            </div>
+            <div class="col-md-6 text-center">
+                <div class="image-dance normal-zoom">
+                    <img id="module" src="~/images/services/ondemand-1.png" class="ondemand-img">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="banner-after-sec" style="height:300px;">
+    <div class="containter">
+        <h1 class="text-center">On-Demand Service</h1>
+    </div>
+</section>
+
+<section class="service-member">
+    <div class="container">
+        <div class="row">
+            @*<div class="col-md-2"></div>*@
+            <div class="col-4 reg">
+                <h3 class="reg_header">Looking for a logistic solution?</h3>
+                <p>Work with a logistics partner that really understands your business.</p>
+                <div class="reg-input"><input title="Search" type="submit" class="button" value="Become A Merchant"></div>
+            </div>
+            <div class="col-4 reg">
+                <h3 class="reg_header">Want to be successful?</h3>
+                <p>Become a part of one of the fastest growing logistics business and turn your life around.</p>
+                <div class="reg-input"><input title="Search" type="submit" class="button" value="Become A Franchise"></div>
+            </div>
+            @*<div class="col-md-2"></div>*@
+        </div>
+    </div>
+</section>
+
+@* FAQ Start *@
+
+<section class="faq-section">
+    <div class="container">
+        <div class="centerplease">
+            Frequently Asked Questions
+        </div>
+
+
+        <div class="content">
+            <div>
+                <input type="checkbox" id="question1" name="q" class="questions" />
+                <div class="plus">+</div>
+                <label for="question1" class="question">
+                    This is the question that will be asked?
+                </label>
+                <div class="answers">
+                    This is the answer of the question.. keep it short.
+                </div>
+            </div>
+
+
+            <div>
+                <input type="checkbox" id="question2" name="q" class="questions" />
+                <div class="plus">+</div>
+                <label for="question2" class="question">
+                    Short?
+                </label>
+                <div class="answers">
+                    short!
+                </div>
+            </div>
+
+            <div>
+                <input type="checkbox" id="question3" name="q" class="questions" />
+                <div class="plus">+</div>
+                <label for="question3" class="question">
+                    Keep answers short. But in case of...If the question is long, the text wraps.
+                </label>
+                <div class="answers">
+                    This is the answer!
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+@*FAQ End*@
+
+<script>
+    $('.image-dance').on('mousemove', function (event) {
+        // This gives you the position of the image on the page
+        var bbox = event.target.getBoundingClientRect();
+
+        // Then we measure how far into the image the mouse is in both x and y directions
+        var mouseX = event.clientX - bbox.left;
+        var mouseY = event.clientY - bbox.top;
+
+        // Then work out how far through the image as a percentage the mouse is
+        var xPercent = (mouseX / bbox.width) * 100;
+        var yPercent = (mouseY / bbox.height) * 100;
+
+        // Then we change the `transform-origin` css property on the image to center the zoom effect on the mouse position
+        //event.target.style.transformOrigin = xPercent + '% ' + yPercent + '%';
+        // It's a bit clearer in jQuery:
+        $(this).css('transform-origin', (xPercent + '% ' + yPercent + '%'));
+        // We add the '%' units to make sure the string looks exactly like the css declaration it becomes.
+
+    });
+
+    // If you want it to automatically trigger on hover
+    $('.image-dance').on('mouseenter', function () {
+        $(this).addClass('zoom-in');
+        $(this).removeClass('normal-zoom');
+    });
+
+    // and stop when not hovering
+    $('.image-dance').on('mouseleave', function () {
+        $(this).addClass('normal-zoom');
+        $(this).removeClass('zoom-in');
+    });
+</script>

@@ -1,0 +1,490 @@
+﻿@{
+    ViewBag.title = "Japax Courrier - Coverage Map";
+}
+
+<link href="~/css/map.css" rel="stylesheet" />
+<link href="~/css/service-common.css" rel="stylesheet" />
+@*Header Start*@
+<section class="banner">
+    <div class="container">
+        <div class="row banner-row">
+            <div class="col-md-6">
+                <div class="promo-title">
+                    <h2>Coverage Map</h2>
+                </div>
+            </div>
+            <div class="col-md-6 text-center">
+                <div class="image-dance normal-zoom">
+                    <img id="module" src="~/images/map/map.png" class="banner-img contact-img">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+@*Header End*@
+@*<section class="banner-after-sec">
+    <div class="container">
+        <div class="row mb-5">
+            <div class="col-12 text-center">
+                <div class="map-header">
+                    <h2>Our Coverage Zone(Chittagong)</h2>
+                </div>
+                <form style="text-align: center">
+                    <label class="switch">
+                        <input type="checkbox" id="toggle" />
+                        <span class="slider round" onclick="addFontColor()">
+                            <span id="on" class="on">Inside City</span>
+                            <span id="off" class="off on-color">Outside City</span>
+                        </span>
+                    </label>
+                </form>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-9">
+                <div class="row">
+                    <div class="col-3"></div>
+                    <div class="col-md-4 wholelist">
+                        <ul>
+                            <li>Akbar Shah</li>
+                            <li>Bakalia</li>
+                            <li>Anowara</li>
+                            <li>Banshkhali</li>
+                            <li>Boalkhali</li>
+                            <li>Chandanaish</li>
+                            <li>Chandgaon</li>
+                            <li>Fatikachari</li>
+                            <li>Halishahar</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4 wholelist">
+                        <ul>
+                            <li>Bandar</li>
+                            <li>Bayezid Bostami</li>
+                            <li>Hathazari</li>
+                            <li>Karnafuli</li>
+                            <li>Khuslshi</li>
+                            <li>Lohagara</li>
+                            <li>Mirsharai</li>
+                            <li>Pahartali</li>
+                            <li>Panchlaish</li>
+                            <li>Patiya</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <img class="map-top" src="~/images/map/e-map-ctg.png" />
+            </div>
+
+        </div>
+    </div>
+</section>*@
+@*Body Start*@
+<section class="banner-after-sec">
+    <div class="container">
+        <div class="row mb-5">
+            <div class="col-md-12 text-center">
+                <div class="map-header">
+                    <h2>Our Coverage Zone</h2>
+                </div>
+                <div class="form-group dropdown-custom-map">
+                    <select id="selectDivision" class="form-control select select-custom">
+                        <option value="">--Select Division--</option>
+                        <option value="dhaka">Dhaka</option>
+                        <option value="chattogram">Chattogram</option>
+                        <option value="rajshahi">Rajshahi</option>
+                        <option value="khulna">Khulna</option>
+                        <option value="barisal">Barisal</option>
+                        <option value="sylhet">Sylhet</option>
+                        <option value="rangpur">Rangpur</option>
+                        <option value="mymensingh">Mymensingh</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="row" id="wholeMap">
+            <div class="col-md-7">
+                <div class="row">
+                    <div class="col-md-2 wholelist">
+                        <ul>
+                            <li>Bagerhat</li>
+                            <li>Bhola</li>
+                            <li>Brahmanbaria</li>
+                            <li>Chapainawabganj</li>
+                            <li>Chuadanga</li>
+                            <li>Cox's Bazar</li>
+                            <li>Feni</li>
+                            <li>Hobigonj</li>
+                            <li>Jessore</li>
+                            <li>Jhenaida</li>
+                            <li>Khagrachori</li>
+                            <li>Kishoreganj</li>
+                            <li>Barisal</li>
+                            <li>Bogura</li>
+                            <li>Chandpur</li>
+                            <li>Chittagong</li>
+                            <li>Comilla</li>
+                            <li>Dhaka</li>
+                            <li>Gazipur</li>
+                            <li>Jamalpur</li>
+                            <li>Jhalokathi</li>
+                            <li>Thakurgaon</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-2 wholelist">
+                        <ul>
+                            <li>Keranigonj</li>
+                            <li>Khulna</li>
+                            <li>Kushtia</li>
+                            <li>Laxmipur</li>
+                            <li>Magura</li>
+                            <li>Mymensingh</li>
+                            <li>Naraynganj</li>
+                            <li>Natore</li>
+                            <li>Nilphamari</li>
+                            <li>Panchagarh</li>
+                            <li>Rajshahi</li>
+                            <li>Satkhira</li>
+                            <li>Sherpur</li>
+                            <li>Sylhet</li>
+                            <li>Barguna</li>
+                            <li>Patuakhali</li>
+                            <li>Bandarban</li>
+                            <li>Gopalganj</li>
+                            <li>Joypurhat</li>
+                            <li>Lalmonirhat</li>
+                            <li>Meherpur</li>
+                            <li>Shariatpur</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-2 wholelist">
+                        <ul>
+                            <li>Madaripur</li>
+                            <li>Moulvibajar</li>
+                            <li>Narail</li>
+                            <li>Narsingdi</li>
+                            <li>Netrokona</li>
+                            <li>Noakhali</li>
+                            <li>Rajbari</li>
+                            <li>Rangpur</li>
+                            <li>Savar</li>
+                            <li>Sunamganj</li>
+                            <li>Tangail</li>
+                            <li>Faridpur</li>
+                            <li>Pirojpur</li>
+                            <li>Gaibandha</li>
+                            <li>Dinajpur</li>
+                            <li>Kurigram</li>
+                            <li>Manikganj</li>
+                            <li>Munsiganj</li>
+                            <li>Naogaon</li>
+                            <li>Rangamati</li>
+                            <li>Sirajganj</li>
+                            <li>Pabna</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-5">
+                <img class="map" src="~/images/map/atc-map-green.svg" />
+            </div>
+        </div>
+
+        <div class="row" id="dhakaDiv" style="display: none;">
+            <div class="col-md-9">
+                <div class="row">
+                    <div class="col-3"></div>
+                    <div class="col-md-4 wholelist">
+                        <ul>
+                            <li>Dhaka</li>
+                            <li>Gazipur</li>
+                            <li>Narsingdi</li>
+                            <li>Manikganj</li>
+                            <li>Munshiganj</li>
+                            <li>Narayanganj</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4 wholelist">
+                        <ul>
+                            <li>Kishoreganj</li>
+                            <li>Tangail</li>
+                            <li>Faridpur</li>
+                            <li>Maradipur</li>
+                            <li>Shariatpur</li>
+                            <li>Rajbari</li>
+                            <li>Gopalganj</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <img class="map" src="~/images/map/dhaka.png" />
+            </div>
+        </div>
+
+        <div class="row" id="chattogramDiv" style="display: none;">
+            <div class="col-md-9">
+                <div class="row">
+                    <div class="col-3"></div>
+                    <div class="col-md-4 wholelist">
+                        <ul>
+                            <li>Chattogram</li>
+                            <li>Bandarban</li>
+                            <li>Chandpur</li>
+                            <li>Comilla</li>
+                            <li>Cox's Bazar</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4 wholelist">
+                        <ul>
+                            <li>Feni</li>
+                            <li>Khagrachari</li>
+                            <li>Lakshmipur</li>
+                            <li>Noakhali</li>
+                            <li>Rangamati</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <img class="map" src="~/images/map/e-map-ctg.png" />
+            </div>
+        </div>
+
+        <div class="row" id="rajshahiDiv" style="display: none;">
+            <div class="col-md-9">
+                <div class="row">
+                    <div class="col-3"></div>
+                    <div class="col-md-4 wholelist">
+                        <ul>
+                            <li>Bogra</li>
+                            <li>Chapainawabganj</li>
+                            <li>Joypurhat</li>
+                            <li>Naogaon</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4 wholelist">
+                        <ul>
+                            <li>Natore</li>
+                            <li>Pabna</li>
+                            <li>Rajshahi</li>
+                            <li>Sirajganj</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <img class="map" src="~/images/map/rajshahi.png" />
+            </div>
+        </div>
+
+        <div class="row" id="khulnaDiv" style="display: none;">
+            <div class="col-md-9">
+                <div class="row">
+                    <div class="col-3"></div>
+                    <div class="col-md-4 wholelist">
+                        <ul>
+                            <li>Bagerhat</li>
+                            <li>Chuadanga</li>
+                            <li>Jessore</li>
+                            <li>Jinaidaha</li>
+                            <li>Khulna</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4 wholelist">
+                        <ul>
+                            <li>Magura</li>
+                            <li>Meherpur</li>
+                            <li>Narail</li>
+                            <li>Satkhira</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <img class="map" src="~/images/map/khulna.png" />
+            </div>
+        </div>
+
+        <div class="row" id="barisalDiv" style="display: none;">
+            <div class="col-md-9">
+                <div class="row">
+                    <div class="col-6"></div>
+                    <div class="col-md-6 wholelist">
+                        <ul>
+                            <li>Barguna</li>
+                            <li>Barisal</li>
+                            <li>Bhola</li>
+                            <li>Jhalokathi</li>
+                            <li>Patuakhali</li>
+                            <li>Pirojpur</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <img class="map" src="~/images/map/barishal.png" />
+            </div>
+        </div>
+
+        <div class="row" id="sylhetDiv" style="display: none;">
+            <div class="col-md-9">
+                <div class="row">
+                    <div class="col-6"></div>
+                    <div class="col-md-6 wholelist">
+                        <ul>
+                            <li>Habiganj</li>
+                            <li>Moulavibazar</li>
+                            <li>Sunamganj</li>
+                            <li>Sylhet</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <img class="map" src="~/images/map/sylhet.png" />
+            </div>
+        </div>
+
+        <div class="row" id="rangpurDiv" style="display: none;">
+            <div class="col-md-9">
+                <div class="row">
+                    <div class="col-3"></div>
+                    <div class="col-md-4 wholelist">
+                        <ul>
+                            <li>Dinanjpur</li>
+                            <li>Gaibandha</li>
+                            <li>Kurigram</li>
+                            <li>Lalmonirhat</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4 wholelist">
+                        <ul>
+                            <li>Nilphamari</li>
+                            <li>Panchagarh</li>
+                            <li>Rangpur</li>
+                            <li>Thakurgaon</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <img class="map" src="~/images/map/rangpur.png" />
+            </div>
+        </div>
+
+        <div class="row" id="mymensinghDiv" style="display: none;">
+            <div class="col-md-8">
+                <div class="row">
+                    <div class="col-6"></div>
+                    <div class="col-md-6 wholelist">
+                        <ul>
+                            <li>Jamalpur</li>
+                            <li>Mymensingh</li>
+                            <li>Netrokona</li>
+                            <li>Sherpur</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <img class="map" src="~/images/map/mymensingh.png" />
+            </div>
+        </div>
+
+    </div>
+</section>
+@*Body End*@
+
+
+<script>
+    $('#selectDivision').on('change', function () {
+        $('#dhakaDiv').hide();
+        $('#chattogramDiv').hide();
+        $('#rajshahiDiv').hide();
+        $('#khulnaDiv').hide();
+        $('#barisalDiv').hide();
+        $('#sylhetDiv').hide();
+        $('#rangpurDiv').hide();
+        $('#mymensinghDiv').hide();
+        $('#wholeMap').hide();
+
+        if (this.value == 'dhaka') {
+            $('#dhakaDiv').show();
+        }
+        else if (this.value == 'chattogram') {
+            $('#chattogramDiv').show();
+        }
+        else if (this.value == 'rajshahi') {
+            $('#rajshahiDiv').show();
+        }
+        else if (this.value == 'khulna') {
+            $('#khulnaDiv').show();
+        }
+        else if (this.value == 'barisal') {
+            $('#barisalDiv').show();
+        }
+        else if (this.value == 'sylhet') {
+            $('#sylhetDiv').show();
+        }
+        else if (this.value == 'rangpur') {
+            $('#rangpurDiv').show();
+        }
+        else if (this.value == 'mymensingh') {
+            $('#mymensinghDiv').show();
+        }
+
+        else {
+            $('#wholeMap').show();
+        }
+    });
+
+    $('.image-dance').on('mousemove', function (event) {
+        // This gives you the position of the image on the page
+        var bbox = event.target.getBoundingClientRect();
+
+        // Then we measure how far into the image the mouse is in both x and y directions
+        var mouseX = event.clientX - bbox.left;
+        var mouseY = event.clientY - bbox.top;
+
+        // Then work out how far through the image as a percentage the mouse is
+        var xPercent = (mouseX / bbox.width) * 100;
+        var yPercent = (mouseY / bbox.height) * 100;
+
+        // Then we change the `transform-origin` css property on the image to center the zoom effect on the mouse position
+        //event.target.style.transformOrigin = xPercent + '% ' + yPercent + '%';
+        // It's a bit clearer in jQuery:
+        $(this).css('transform-origin', (xPercent + '% ' + yPercent + '%'));
+        // We add the '%' units to make sure the string looks exactly like the css declaration it becomes.
+
+    });
+
+    // If you want it to automatically trigger on hover
+    $('.image-dance').on('mouseenter', function () {
+        $(this).addClass('zoom-in');
+        $(this).removeClass('normal-zoom');
+    });
+
+    // and stop when not hovering
+    $('.image-dance').on('mouseleave', function () {
+        $(this).addClass('normal-zoom');
+        $(this).removeClass('zoom-in');
+    });
+
+    function addFontColor() {
+        if ($('#on').hasClass('on-color')) {
+            $('#on').removeClass('on-color')
+        }
+        else {
+            $('#on').addClass('on-color')
+        }
+        if ($('#off').hasClass('on-color')) {
+            $('#off').removeClass('on-color')
+        }
+        else {
+            $('#off').addClass('on-color')
+        }
+    }
+</script>
+

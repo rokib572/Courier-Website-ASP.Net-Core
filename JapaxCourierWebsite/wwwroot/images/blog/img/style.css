@@ -1,0 +1,58 @@
+*
+{
+    margin: 0;
+    padding: 0;
+}
+body
+{
+    font-family: sans-serif;
+}
+.container
+{
+opacity: 1.0;
+}
+
+#banner {
+    background-image: url(sky.jpg);
+    color: #3c389f;
+  
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: Calibri, sans-serif;
+    background-position: center;
+
+}
+
+.promo-title {
+    font-size: 64px;
+    font-weight: 600;
+    margin-top: 54px;
+}
+.vc_custom_1574073649587 { 
+	margin-top: 0px; 
+	margin-bottom: 0px; 
+	padding-top: 18%; 
+	padding-bottom: 0px;
+}
+.title-xlarge { 
+	letter-spacing: 0!; 
+	line-height: 90px; 
+	font-size: 90px; 
+	font: weight 9; 
+	margin: 1.4em 0; 
+	font-family: 'Montserrat', sans-serif;
+}
+.light {
+	color: #3c389f; 
+	letter-spacing: 0; 
+	text-transform: none;
+}
+/* body{
+	background-image: url("sky.jpg");
+	background-color: wheat;
+	margin: 0;
+	background-size: cover;
+	background-repeat: no-repeat;
+	color: #fff;
+	font-family: Calibri, sans-serif;
+} */

@@ -1,0 +1,182 @@
+﻿@*<link href="~/css/index3.css" rel="stylesheet" />
+    <style>
+        .mobile-slider-main-container {
+            position: relative;
+        }
+
+        .around-mobile-circled-icons {
+            height: 400px; /* must be same as width */
+            width: 400px;
+            top: 0;
+            left: 20%;
+            border-radius: 50%;
+            position: absolute;
+            z-index: 10;
+        }
+
+            .around-mobile-circled-icons span {
+                position: absolute;
+                display: block;
+                height: 30px; /* must be same as width */
+                width: 30px;
+                top: calc(50% - 15px); /* must be same as left and negative half width  */
+                left: calc(50% - 15px);
+            }
+
+        .process-slider2 {
+            margin: auto;
+            position: relative;
+            border-radius: 37px;
+            padding: 58px 0;
+            max-width: 240px; /* same as image width */
+        }
+        .banner-left-top {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+        }
+        .banner-top-img{
+            height: 225px;
+        }
+        .banner-left-top-img {
+            height: 300px;
+            text-align: center;
+            padding-bottom: 20px;
+        }
+        .pt-8 {
+            padding-top: 11rem;
+        }
+    </style>
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-6">
+
+                </div>
+                <div class="col-6">
+                    <div class="d-flex h-100 align-items-center justify-content-center pb-3 pt-8">
+                        <div class="mobile-slider-main-container">
+                            <div class="banner-left-top-img">
+                                <img class="banner-top-img" src="~/images/home/animation/delivery-boy.svg" />
+                            </div>
+                            <div class="around-mobile-circled-icons">
+                                <span id="icon-0" class="active-banner-icon-slide active-banner-icon-current-slide">
+                                    <img src="~/images/home/screen-icon/smartphone (3).png" />
+                                </span>
+                                <span id="icon-1">
+                                    <img src="~/images/home/screen-icon/user.png" />
+                                </span>
+                                <span id="icon-2">
+                                    <img src="~/images/home/screen-icon/qr-code (1).png" />
+                                </span>
+                                <span id="icon-3">
+                                    <img src="~/images/home/screen-icon/registration (2).png" />
+                                </span>
+                                <span id="icon-4">
+                                    <img src="~/images/home/screen-icon/settings.png" />
+                                </span>
+                                <span id="icon-5">
+                                    <img src="~/images/home/screen-icon/settings.png" />
+                                </span>
+                                <span id="icon-6">
+                                    <img src="~/images/home/screen-icon/settings.png" />
+                                </span>
+                                <span id="icon-6">
+                                    <img src="~/images/home/screen-icon/settings.png" />
+                                </span>
+
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                     version="1.1" preserveAspectRatio="none" id="circle-svg-animation">
+                                    <circle class="circle" fill="none" stroke="#bbb" stroke-dasharray="0,20000"
+                                            transform="rotate(180,100,100)" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script>
+
+                let allIconsDoms = document.querySelectorAll('.around-mobile-circled-icons span');
+                let startAngle = 0;
+                let endAngle = 315; // 45deg
+                let eachAngle = (endAngle - startAngle) / (allIconsDoms.length - 1);
+                let radius = document.body.clientWidth * 13/75;
+
+                if (document.body.clientWidth > 1440) {
+                    radius = 220;
+                } else {
+                    radius = 170;
+                }
+                let $circleSvgAnimationDiv = document.querySelector('#circle-svg-animation');
+                let $circlePathAnimationDiv = document.querySelector('#circle-svg-animation .circle');
+                 // same as half width of .around-mobile-circled-icons
+                document.querySelector('.around-mobile-circled-icons').setAttribute("style", `height: ${2 * radius}px; width: ${2 * radius}px`);
+                $circleSvgAnimationDiv.setAttribute("style", `height: ${2 * radius}px; width: ${2 * radius}px`);
+
+                let strokeWidth = 1;
+                $circleSvgAnimationDiv.setAttribute("viewBox", `0 0 ${2 * (radius + strokeWidth)} ${2 * (radius + strokeWidth)}`);
+                $circlePathAnimationDiv.setAttribute("stroke-width", strokeWidth)
+                $circlePathAnimationDiv.setAttribute("transform", `rotate(180,${radius},${radius})`)
+                $circlePathAnimationDiv.setAttribute("cx", radius - strokeWidth)
+                $circlePathAnimationDiv.setAttribute("cy", radius - strokeWidth)
+                $circlePathAnimationDiv.setAttribute("r", radius)
+
+                allIconsDoms.forEach((el, i) => {
+
+                    let radian_value = (startAngle + eachAngle * i) * Math.PI / 180
+                    let X = radius * Math.cos(radian_value)
+                    let Y = radius * Math.sin(radian_value)
+
+                    el.setAttribute("style", `transform: translate(${X}px, ${Y}px)`);
+                });
+
+                const circle = document.querySelector('#circle-svg-animation .circle');
+                const angle_increment = 10;
+        const interval = 120;
+
+        var count = 0;
+        $(document).ready(function () {
+            setTimeout(function () {
+                if(count == 0)
+                $('.around-mobile-circled-icons span').removeClass("active-banner-icon-slide");
+                $('.around-mobile-circled-icons span').removeClass("active-banner-icon-current-slide");
+                $(`#icon-${count}`).addClass("active-banner-icon-slide active-banner-icon-current-slide");
+                count++;
+                if (count == 6) {
+                    count = 0;
+                }
+            }, 5000);
+        });
+
+                //$('.banner-slider').on('beforeChange', function (event, slick, currentSlide, nextSlide) {
+                //    if (currentSlide == 4) return
+                //    let angle = currentSlide * 135;
+                //    let constAngle = currentSlide * 135;
+                //    if (constAngle >= 535) {
+                //        angle = 0;
+                //        constAngle = 0;
+                //    }
+
+                //    window.timer = window.setInterval(function () {
+                //        circle.setAttribute("stroke-dasharray", angle + ", 20000");
+
+                //        if (angle >= constAngle + 120) {
+                //            window.clearInterval(window.timer);
+                //        }
+                //        angle += angle_increment;
+                //    }.bind(this), interval);
+
+                //})
+
+                $('.banner-slider').on('afterChange', function (event, slick, currentSlide, nextSlide) {
+                    //if (currentSlide == 0)
+                });
+    </script>*@
+
+@*COMMON-PAGE-STRUCTURE-START*@
+
+
+@*COMMON-PAGE-STRUCTURE-END*@

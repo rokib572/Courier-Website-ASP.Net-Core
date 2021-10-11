@@ -1,0 +1,110 @@
+﻿.main {
+    /*box-shadow: 0 0 24px rgba(0, 0, 0, 0.15);
+    font-family: "Open Sans";*/
+    width: 1170px;
+    margin: 0 auto;
+}
+
+.price-table {
+    /*background-image: url('../images/pricing/watercolor-background_87374-69.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;*/
+    width: 100%;
+    border-collapse: collapse;
+    border: 0 none;
+}
+.normal-zoom {
+    transform: scale(1);
+    transition: transform 250ms;
+}
+.zoom-in {
+    transform: scale(1.05);
+    transition: transform 250ms;
+}
+
+
+    /*.price-table tr:not(:last-child) {
+        border-bottom: 1px solid rgba(0, 0, 0, 0.03);
+        border-bottom: 1px solid rgba(0, 0, 0, 0.03);
+    }*/
+
+    .price-table tr td {
+        border: 1px solid #8f6bbe;
+        padding: 8px 24px;
+        font-size: 18px;
+        text-align: center;
+    }
+   /* .price-table tr:nth-child(even) {
+        background-color: #ffffff;
+    }*/
+
+    /*.price-table tr:hover {
+        background-color: #eeeeee;
+    }*/
+
+    .price-table .fa-check {
+        color: #5336ca;
+    }
+
+    .price-table .fa-times {
+        color: #d8d6e3;
+    }
+
+    .price-table tr td:nth-child(3) {
+        padding: 8px 48px;
+    }
+    .price-table tr.price-table-head td {
+        font-size: 16px;
+        font-weight: 600;
+        font-family: "Montserrat";
+        text-transform: uppercase;
+    }
+    .icon{
+        width: 50px;
+    }
+    .price-table tr.price-table-head {
+        background-color: #8c89e2;
+        color: #ffffff;
+    }
+
+    .price-table td.price {
+        color: #f43f54;
+        padding: 16px 24px;
+        font-size: 20px;
+        font-weight: 600;
+        font-family: "Montserrat";
+    }
+
+        .price-table td.price a {
+            background-color: #5336ca;
+            color: #ffffff;
+            padding: 12px 32px;
+            margin-top: 16px;
+            font-size: 12px;
+            font-weight: 600;
+            font-family: "Montserrat";
+            text-transform: uppercase;
+            display: inline-block;
+            border-radius: 64px;
+        }
+
+    .price-table td.price-table-popular {
+        /*font-family: "Montserrat";*/
+        border-top: 3px solid #5336ca;
+        color: #5336ca;
+        text-transform: uppercase;
+        font-size: 12px;
+        padding: 12px 48px;
+        font-weight: 700;
+    }
+
+    /*.price-table .price-blank {
+        background-color: #fafafa;
+        border: 0 none;
+    }
+
+    .price-table svg {
+        width: 90px;
+        fill: #5336ca;
+    }*/
+    

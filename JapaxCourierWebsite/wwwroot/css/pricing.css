@@ -1,0 +1,260 @@
+﻿/*--------------------  Pricing Starts -------------------- */
+:root {
+    --color-primary: #000000; /*font color black*/
+    --color-secondary: #ffffff; /*font color white*/
+    --color-main: #d10513; /*main color*/
+}
+
+.image-aboutus-banner {
+    /*   background-image: url('../images/pricing/abstract-blue-science-background_1182-1440.jpg');*/
+    background-color: transparent;
+    background-image: linear-gradient(90deg, #ed1e25 0%, rgba(0,0,0,0.72) 100%);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    color: var(--color-secondary);
+    /*    padding-top: 110px;
+    padding-bottom: 110px;*/
+    text-align: center;
+    margin-top: -23px;
+    margin-bottom:50px;
+}
+
+.lg-text {
+    font-size: 52px;
+    font-weight: 600;
+    text-transform: none;
+    color: var(--color-secondary);
+    margin-top: 150px;
+}
+
+.image-aboutus-para {
+    color: var(--color-secondary);
+    margin-bottom:150px;
+}
+
+
+.title-pricing {
+    text-align: center;
+}
+
+/*.card {
+    margin: auto;
+    box-shadow: 0 0 11px 1px #9c5252;
+}
+
+.card-img-top {
+    width: 100%;
+    border-top-left-radius: calc(0.25rem - 1px);
+    border-top-right-radius: calc(0.25rem - 1px);
+}
+
+
+.card-header {
+    text-align: center;
+    padding: 20px;
+    font: bold;
+}
+.card-body {
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    padding: 1.25rem;*/
+    /*border-top: 1px solid #d10513;*/
+/*}
+
+.card-title {
+    margin-bottom: 0.75rem;
+}*/
+
+.price-table-header{
+    background: var(--color-main);
+    /*background: linear-gradient(to right, #5f0909, #b5334b 20px, #670b0b 13px, #730a0a 38px, #730c0c 40%, #610707 60%);*/
+    color: var(--color-secondary);
+    padding: 15px;
+    font-size: 18px;
+    text-align:center;
+}
+
+.price-table-td {
+    text-align: center;
+    padding: 15px 0;
+    vertical-align: middle;
+    color: #3a3a3a;
+    font-size: 20px;
+    border-bottom: 1px solid #e3e7e9;
+    border-right: 1px solid #e3e7e9;
+}
+
+
+table {
+    border-collapse: collapse;
+    border: 1px solid #e3e7e9;
+    margin:auto;
+}
+
+
+
+/*Toggle Button start*/
+
+/*.switch {
+    position: relative;
+    display: inline-block;
+    width: 564px;
+    height: 60px;
+}
+
+    .switch input {
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    background-color: #d10513;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+    .slider:before {
+        position: absolute;
+        content: "";
+        height: 56px;
+        width: 300px;
+        border-radius: 50%;
+        left: 2px;
+        top: 2px;
+        bottom: 3px;
+        background-color: white;
+        color: #d10513;
+        -webkit-transition: .4s;
+        transition: .4s;
+    }
+
+input:checked + .slider {
+    background-color: #d10513;
+}
+
+input:focus + .slider {
+    box-shadow: 0 0 1px #d10513;
+}
+
+input:checked + .slider:before {
+    -webkit-transform: translateX(200px);
+    -ms-transform: translateX(200px);
+    transform: translateX(260px);
+}
+
+.on {
+    display: none;
+    left: 74% !important;
+}
+
+.on, .off {
+    color: #d10513;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 26%;
+    font-size: 20px;
+    font-family: Verdana, sans-serif;
+}
+
+input:checked + .slider .on {
+    display: block;
+}
+
+input:checked + .slider .off {
+    display: none;
+}*/
+
+
+/* Rounded sliders */
+/*.slider.round {
+    border-radius: 100px;
+}
+
+    .slider.round:before {
+        border-radius: 100px;
+    }*/
+
+/*Toggle Button end*/
+
+
+/*Tabbed Design Start*/
+
+
+/* Style tab links */
+* {
+    box-sizing: border-box
+}
+.tablink {
+    background-color: #d10513;
+    color: white;
+    /*float: left;*/
+    border: 1px solid #d10513;
+    outline: none;
+/*    cursor: pointer;*/
+    padding: 14px 16px;
+    font-size: 17px;
+    width: 11.5%;
+}
+
+.tablink:hover {
+    background-color: #ffffff;
+    color: #d10513;
+    border: 1px solid #d10513;
+}
+
+.tablink:active {
+    background-color: #ffffff;
+    color: #d10513;
+    border: 1px solid #d10513;
+}
+
+.tablink.focus {
+    background-color: #ffffff;
+    color: #d10513;
+    border: 1px solid #d10513;
+}
+
+
+/* Style the tab content (and add height:100% for full page content) */
+.tabcontent {
+    display: none;
+    padding: 100px 20px;
+    height: 100%;
+}
+
+/*#Home {
+    background-color: white;
+}
+
+#News {
+    background-color: white;
+}
+
+#Contact {
+    background-color: white;
+}
+
+#About {
+    background-color: white;
+}
+*/
+
+
+/*Tabbed Design End*/
+
+
+
+
+/*--------------------  Pricing Ends -------------------- */
+
+

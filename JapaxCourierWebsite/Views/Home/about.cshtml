@@ -1,0 +1,146 @@
+﻿@{
+    ViewBag.Title = "Japax Courrier - About Us";
+}
+<link href="~/css/about.css" rel="stylesheet" />
+<link href="~/css/service-common.css" rel="stylesheet" />
+<style>
+    .banner-img{
+        max-width: 60%;
+    }
+</style>
+<section class="banner">
+    <div class="container">
+        <div class="row banner-row">
+            <div class="col-md-6">
+                <div class="promo-title">
+                    <h2>About Us</h2>
+                </div>
+            </div>
+            <div class="col-md-6 text-center">
+                <div class="image-dance normal-zoom">
+                    <img id="module" src="~/images/about/about-us.svg" class="banner-img">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="banner-after-sec">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="about-us pt-10">
+                    <h1>WHO ARE WE?</h1>
+                    <p>
+                        <br />
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
+                        convallis egestas rhoncus. Donec facilisis fermentum sem, ac
+                        viverra ante luctus vel. Donec vel mauris quam.
+                    </p>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
+                        convallis egestas rhoncus. Donec facilisis fermentum sem, ac
+                        viverra ante luctus vel. Donec vel mauris quam. Lorem ipsum
+                        dolor sit amet. Nulla convallis egestas rhoncus.
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <img alt="" src="~/images/about/about.svg" class="img" />
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="mission">
+    <div class="container">
+        <div class="mission-headline">
+            <h2>OUR STRENGTH</h2>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="strength-img">
+                    <img src="~/images/about/mission/46-removebg-preview.png" />
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="row">
+                    <div class="sub-strength">
+                        <img src="~/images/about/mission/team (4).png" />
+                        <div class="strength-title">
+                            <h4> Our Mission</h4>
+                            <div class="strength-details">
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
+                                    convallis egestas rhoncus.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="sub-strength">
+                        <img src="~/images/about/mission/team (4).png" />
+                        <div class="strength-title">
+                            <h4> Our Mission</h4>
+                            <div class="strength-details">
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
+                                    convallis egestas rhoncus.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="sub-strength">
+                        <img src="~/images/about/mission/team (4).png" />
+                        <div class="strength-title">
+                            <h4> Our Mission</h4>
+                            <div class="strength-details">
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
+                                    convallis egestas rhoncus.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<script>
+    $('.image-dance').on('mousemove', function (event) {
+        // This gives you the position of the image on the page
+        var bbox = event.target.getBoundingClientRect();
+
+        // Then we measure how far into the image the mouse is in both x and y directions
+        var mouseX = event.clientX - bbox.left;
+        var mouseY = event.clientY - bbox.top;
+
+        // Then work out how far through the image as a percentage the mouse is
+        var xPercent = (mouseX / bbox.width) * 100;
+        var yPercent = (mouseY / bbox.height) * 100;
+
+        // Then we change the `transform-origin` css property on the image to center the zoom effect on the mouse position
+        //event.target.style.transformOrigin = xPercent + '% ' + yPercent + '%';
+        // It's a bit clearer in jQuery:
+        $(this).css('transform-origin', (xPercent + '% ' + yPercent + '%'));
+        // We add the '%' units to make sure the string looks exactly like the css declaration it becomes.
+
+    });
+
+    // If you want it to automatically trigger on hover
+    $('.image-dance').on('mouseenter', function () {
+        $(this).addClass('zoom-in');
+        $(this).removeClass('normal-zoom');
+    });
+
+    // and stop when not hovering
+    $('.image-dance').on('mouseleave', function () {
+        $(this).addClass('normal-zoom');
+        $(this).removeClass('zoom-in');
+    });
+</script>
+
